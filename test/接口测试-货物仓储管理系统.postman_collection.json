@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "dbb7c04f-84be-46e9-9f6b-27325c4c2278",
+		"name": "货物仓储管理系统",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "货物 _ 查询",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/cargo/info",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"cargo",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "货物 _ 新增",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cargo_name",
+							"value": "测试",
+							"type": "text"
+						},
+						{
+							"key": "cargo_price",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cargo_count",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "www.localhost:8009/admin/cargo/info",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"cargo",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "货物 _ 删除",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/cargo/info/:id",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"cargo",
+						"info",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "货物 _ 修改",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cargo_name",
+							"value": "测试128",
+							"type": "text"
+						},
+						{
+							"key": "cargo_price",
+							"value": "88",
+							"type": "text"
+						},
+						{
+							"key": "cargo_count",
+							"value": "88",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "www.localhost:8009/admin/cargo/info/:id",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"cargo",
+						"info",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "货物 _ 查询 by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/cargo/info/:id",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"cargo",
+						"info",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "货物 _ 查询 by key",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/cargo/info_key?key=哈",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"cargo",
+						"info_key"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "哈"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "订单 _ 查询",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/order/find",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"order",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "订单 _ 查询 by key",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/order_find_key?key=s",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"order_find_key"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备 _ 查询",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/facility/info",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"facility",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备 _ 新增",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "facility_name",
+							"value": "洗衣机",
+							"type": "text"
+						},
+						{
+							"key": "facility_phone",
+							"value": "18850454419",
+							"type": "text"
+						},
+						{
+							"key": "facility_place",
+							"value": "福州长乐",
+							"type": "text"
+						},
+						{
+							"key": "facility_email",
+							"value": "33158742@qq.com",
+							"type": "text"
+						},
+						{
+							"key": "facility_principal",
+							"value": "张源",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "www.localhost:8009/admin/facility/info",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"facility",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备 _ 删除",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/facility/info/:id",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"facility",
+						"info",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备 _ 修改",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "facility_name",
+							"value": "冰箱",
+							"type": "text"
+						},
+						{
+							"key": "facility_phone",
+							"value": "110",
+							"type": "text"
+						},
+						{
+							"key": "facility_place",
+							"value": "莆田",
+							"type": "text"
+						},
+						{
+							"key": "facility_email",
+							"value": "333",
+							"type": "text"
+						},
+						{
+							"key": "facility_principal",
+							"value": "我不是啊",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "www.localhost:8009/admin/facility/info/:id",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"facility",
+						"info",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备 _ 查询 by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/facility/info/:id",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"facility",
+						"info",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备 _ 查询 by key",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.localhost:8009/admin/facility/info_key?key=洗",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"admin",
+						"facility",
+						"info_key"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "洗"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "www.localhost:8009/home/login",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"home",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注册",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "测试6",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "11111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "www.localhost:8009/home/register",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"home",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
